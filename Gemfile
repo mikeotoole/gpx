@@ -3,8 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.2'
 
 group :production do
-  gem 'mysql2'
-  gem 'therubyracer'
+  gem 'pg'
+  gem 'thin'
+  gem 'newrelic_rpm'
 end
 
 gem 'haml'

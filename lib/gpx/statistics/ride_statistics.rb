@@ -108,14 +108,14 @@ module Gpx
         #
         # Returns the maximum elevation in meters.
         def maximum_elevation(ride)
-          ride.points.map(&:elevation).max || 0
+          ride.points.map(&:elevation).delete_if{|e| e.blank?}.max || 0
         end
 
         # Calculates the minimum elevation reached on a ride.
         #
         # Returns the minimum elevation in meters.
         def minimum_elevation(ride)
-          ride.points.map(&:elevation).min || 0
+          ride.points.map(&:elevation).delete_if{|e| e.blank?}.min || 0
         end
 
         # Calculates the time elapsed between points on a ride.
