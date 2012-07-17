@@ -1,0 +1,6 @@
+spec
+log
+lib/tasks/dev_tasks
+tmp
+public/uploads
+doc
